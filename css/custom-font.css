@@ -1,0 +1,14 @@
+@font-face {
+    font-family:'CerebriSansPro-Medium';
+    src:url('./../font/CerebriSansPro-Medium.otf');
+}
+
+@font-face {
+    font-family:'CerebriSansPro-Light';
+    src:url('./../font/CerebriSansPro-Light.otf');
+}
+
+@font-face {
+    font-family:'CerebriSansPro-Bold';
+    src:url('./../font/CerebriSansPro-Bold.otf');
+}
