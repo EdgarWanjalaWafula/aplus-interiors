@@ -45,6 +45,7 @@ function a_plus_interiors_setup() {
 		* @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
 		*/
 	add_theme_support( 'post-thumbnails' );
+	add_image_size( 'project-image', 1170, 570, true );
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus(
@@ -157,7 +158,7 @@ function a_plus_interiors_scripts() {
 	wp_enqueue_script( 'a-plus-interiors-flickity', '//unpkg.com/flickity@2/dist/flickity.pkgd.min.js', array(), _S_VERSION, true );
 	// wp_enqueue_script( 'a-plus-interiors-flickity-hash', '//unpkg.com/flickity-hash@2/hash.js', array(), _S_VERSION, true );
 	// wp_enqueue_script( 'a-plus-interiors-aos', '//cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js', array(), _S_VERSION, true );
-	// wp_enqueue_script( 'a-plus-interiors-parallax', get_template_directory_uri() . '/js/parallax.min.js', array(), _S_VERSION, true );
+	wp_enqueue_script( 'a-plus-interiors-parallax', get_template_directory_uri() . '/js/parallax.min.js', array(), _S_VERSION, true );
 	wp_enqueue_script( 'a-plus-interiors-custom', get_template_directory_uri() . '/js/custom.js', array(), _S_VERSION, true );
 	wp_enqueue_script( 'a-plus-interiors-slider', get_template_directory_uri() . '/js/flickity.slider.js', array(), _S_VERSION, true );
 }

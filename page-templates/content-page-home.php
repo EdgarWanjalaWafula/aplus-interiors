@@ -9,7 +9,7 @@
     if($sliders){
         ?>
             <section class="position-relative a-plus-home-banner">
-                <div class="carousel w-100">
+                <div class="carousel w-100 h-100">
                     <?php 
                         while($sliders->have_posts()): $sliders->the_post();
                             ?>
@@ -71,6 +71,8 @@
                 </div>
             </section>
         <?php
+
+        wp_reset_postdata();
     }
 
     $about_the_firm = get_field('about_the_firm');
@@ -80,7 +82,16 @@
             <section class="position-relative theme-padding">
                 <div class="container">
                     <div class="row">
+                        <div class="col">
+                            <?php 
+                                echo $about_the_firm['tag_line'] ? '<span>'.$about_the_firm['tag_line'].'</span>' : null; 
+                                echo $about_the_firm['heading'] ? '<h1>'.$about_the_firm['heading'].'</h1>' : null; 
+                                echo $about_the_firm['paragraph'] ? '<p>'.$about_the_firm['paragraph'].'</p>' : null; 
+                            ?>
+                        </div>
+                        <div class="col">
 
+                        </div>
                     </div>
                 </div>
             </section>

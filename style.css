@@ -58,7 +58,7 @@ body {
  * Group all items with 'block' setting
  */
 .menu-1 .sub-menu > li a,
-.flickity-page-dots .dot,
+.a-plus-home-banner .flickity-page-dots .dot,
 .carousel-cell img,
 .menu-toggle,
 .menu-toggle span,
@@ -381,7 +381,7 @@ select,
 optgroup,
 textarea {
 	color: #404040;
-	font-family: 'CerebriSansPro-Medium';
+    font-family:'CerebriSansPro-Light';
 	font-size: 1rem;
 	line-height: 1.5;
 }
@@ -503,27 +503,10 @@ table {
 
 /* Links
 --------------------------------------------- */
-a {
-	color: #4169e1;
-}
-
-a:visited {
-	color: #800080;
-}
-
-a:hover,
-a:focus,
-a:active {
-	color: #191970;
-}
-
-a:focus {
-	outline: thin dotted;
-}
-
-a:hover,
-a:active {
-	outline: 0;
+.site-header .menu-item-has-children > a::before,
+.theme-color, 
+.menu-1 .sub-menu > li:hover a{
+	color:var(--theme-color)
 }
 
 /* Forms
@@ -620,7 +603,7 @@ textarea {
 /* Navigation
 --------------------------------------------- */
 .site-branding img {
-	width: 65%;
+	width:55%;
 }
 
 .site-header {
@@ -636,7 +619,7 @@ textarea {
 	margin-right: 2rem;
 }
 
-.flickity-page-dots .dot {
+.a-plus-home-banner .flickity-page-dots .dot {
 	background: var(--theme-color);
 }
 
@@ -705,10 +688,6 @@ textarea {
 	margin:0 0 .5rem;
 }
 
-.menu-1 .sub-menu > li:hover a{
-	color:var(--theme-color)
-}
-
 .inner-pg .menu-1 > li a,
 .inner-pg .menu-2 > li a,
 .inner-pg .site-branding-nav nav ul>li a {
@@ -719,14 +698,23 @@ textarea {
 	background-color:#222;
 }
 
+.site-header .menu-item-has-children > a::before {
+	content: "\F4FE";
+	position: absolute;
+	top: 50%;
+	right: -1.25rem;
+	transform: translateY(-50%);
+	font-family: bootstrap-icons;
+	font-size: 17px;
+}
+
 /* Posts and pages
 --------------------------------------------- */
 .a-plus-home-banner {
-	height: calc(100vh - 3rem);
+	height:100vh;
 }
 
 .flickity-viewport,
-.carousel,
 .theme-carousel,
 .theme-carousel .owl-stage-outer,
 .theme-carousel .owl-stage,
@@ -746,6 +734,7 @@ textarea {
 	overflow: hidden;
 }
 
+.project-banner h1,
 .carousel-cell h1 {
 	font-size: 4.5rem;
 	margin: 1rem 0;
@@ -773,6 +762,7 @@ textarea {
 		background: #fff;
 }
 
+.project-title, 
 .carousel-tabs li {
 	padding: 2rem 3rem;
 }
@@ -781,7 +771,7 @@ textarea {
 	font-family: 'CerebriSansPro-Light';
 }
 
-.flickity-page-dots {
+.a-plus-home-banner .flickity-page-dots {
     top: 50%;
     right: 6rem;
     left: unset;
@@ -790,158 +780,31 @@ textarea {
 	bottom:unset;
 }
 
-.flickity-page-dots .dot{
+.a-plus-home-banner .flickity-page-dots .dot{
 	margin-bottom:1rem;
 }
 
-/* Comments
---------------------------------------------- */
-.comment-content a {
-	word-wrap: break-word;
-}
-
-.bypostauthor {
-	display: block;
-}
-
-/* Widgets
---------------------------------------------- */
-.widget {
-	margin: 0 0 1.5em;
-}
-
-.widget select {
-	max-width: 100%;
-}
-
-/* Media
---------------------------------------------- */
-.page-content .wp-smiley,
-.entry-content .wp-smiley,
-.comment-content .wp-smiley {
-	border: none;
-	margin-bottom: 0;
-	margin-top: 0;
-	padding: 0;
-}
-
-/* Make sure logo link wraps around logo image. */
-.custom-logo-link {
-	display: inline-block;
-}
-
-/* Captions
---------------------------------------------- */
-.wp-caption {
-	margin-bottom: 1.5em;
-	max-width: 100%;
-}
-
-.wp-caption img[class*="wp-image-"] {
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
-}
-
-.wp-caption .wp-caption-text {
-	margin: 0.8075em 0;
-}
-
-.wp-caption-text {
-	text-align: center;
-}
-
-
 /*--------------------------------------------------------------
-# Plugins
+# Single
+1. Projects
 --------------------------------------------------------------*/
-
-/* Jetpack infinite scroll
---------------------------------------------- */
-
-/* Hide the Posts Navigation and the Footer when Infinite Scroll is in use. */
-.infinite-scroll .posts-navigation,
-.infinite-scroll.neverending .site-footer {
-	display: none;
+.project-banner{
+	height:100vh;
 }
 
-/* Re-display the Theme Footer when Infinite Scroll has reached its end. */
-.infinity-end.neverending .site-footer {
-	display: block;
+.project-banner h1{
+	margin-bottom:0;
 }
 
-/*--------------------------------------------------------------
-# Utilities
---------------------------------------------------------------*/
-
-/* Accessibility
---------------------------------------------- */
-
-/* Text meant only for screen readers. */
-.screen-reader-text {
-	border: 0;
-	clip: rect(1px, 1px, 1px, 1px);
-	clip-path: inset(50%);
-	height: 1px;
-	margin: -1px;
-	overflow: hidden;
-	padding: 0;
-	position: absolute !important;
-	width: 1px;
-	word-wrap: normal !important;
+.project-description{
+	padding-left:3rem;
 }
 
-.screen-reader-text:focus {
-	background-color: #f1f1f1;
-	border-radius: 3px;
-	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
-	clip: auto !important;
-	clip-path: none;
-	color: #21759b;
-	display: block;
-	font-size: 0.875rem;
-	font-weight: 700;
-	height: auto;
-	left: 5px;
-	line-height: normal;
-	padding: 15px 23px 14px;
-	text-decoration: none;
-	top: 5px;
-	width: auto;
-	z-index: 100000;
+.project-images .carousel{
+	height:570px;
 }
 
-/* Do not show the outline on the skip link target. */
-#primary[tabindex="-1"]:focus {
-	outline: 0;
-}
-
-/* Alignments
---------------------------------------------- */
-.alignleft {
-
-	/*rtl:ignore*/
-	float: left;
-
-	/*rtl:ignore*/
-	margin-right: 1.5em;
-	margin-bottom: 1.5em;
-}
-
-.alignright {
-
-	/*rtl:ignore*/
-	float: right;
-
-	/*rtl:ignore*/
-	margin-left: 1.5em;
-	margin-bottom: 1.5em;
-}
-
-.aligncenter {
-	clear: both;
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
-	margin-bottom: 1.5em;
+.nav-links {
+	display: flex;
+	justify-content: space-between;
 }

@@ -166,7 +166,7 @@ endif;
 
 
 if(!function_exists( 'a_plus_image')): 
-	function a_plus_image($arr, $size, $class){
+	function a_plus_image($arr, $size, $class = null){
 		if($arr): 
 			$img_id 	= $arr['ID']; 
 			$img_src 	= wp_get_attachment_image_url($img_id, $size);
@@ -175,7 +175,7 @@ if(!function_exists( 'a_plus_image')):
 				<img src="<?php echo esc_url($img_src); ?>"
 					class="<?php echo esc_attr($class); ?>"
 					srcset="<?php echo esc_attr($img_srcset); ?>"
-					sizes="(max-width: 50em) 87vw, 680px" alt="Lulea">
+					sizes="(max-width: 50em) 87vw, 680px" alt="A-plus Interiors">
 			<?php
 		else: 
 			?>
