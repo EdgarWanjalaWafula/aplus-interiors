@@ -27,14 +27,14 @@
 	<header id="masthead" class="site-header higher-z-index w-100 <?php echo is_front_page() ? 'position-absolute front-pg' : 'position-relative inner-pg'; ?>">
 		<div class="container">
 			<div class="row align-items-center">
-				<div class="col-md-2">
+				<div class="col-lg-2 col-md-3">
 					<div class="site-branding">
 						<?php
 							the_custom_logo();
 						?>
 					</div><!-- .site-branding -->
 				</div>
-				<div class="col-lg-4">
+				<div class="col-lg-5 col-md-6">
 					<nav id="site-navigation" class="main-navigation">
 						<?php
 							wp_nav_menu(
@@ -70,3 +70,5 @@
 			</div>
 		</div>
 	</header><!-- #masthead -->
+
+	<?php // get_template_part('template-parts/content', 'menu-panel'); ?>

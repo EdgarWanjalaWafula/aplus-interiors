@@ -24,6 +24,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 
 :root {
 	--theme-color: #ed1c24;
+	--theme-text-color: #666;
 }
 
 
@@ -57,7 +58,7 @@ body {
 /**
  * Group all items with 'block' setting
  */
-.menu-1 .sub-menu > li a,
+.menu-1 .sub-menu>li a,
 .a-plus-home-banner .flickity-page-dots .dot,
 .carousel-cell img,
 .menu-toggle,
@@ -381,7 +382,7 @@ select,
 optgroup,
 textarea {
 	color: #404040;
-    font-family:'CerebriSansPro-Light';
+	font-family: 'CerebriSansPro-Light';
 	font-size: 1rem;
 	line-height: 1.5;
 }
@@ -448,12 +449,13 @@ big {
 	font-size: 125%;
 }
 
-.theme-links{
+.minor-heading,
+.theme-links {
 	font-family: 'Montserrat', sans-serif;
-	letter-spacing:.2rem;
-	font-weight:500;
-	text-transform:uppercase;
-	font-size:14px;
+	letter-spacing: .2rem;
+	font-weight: 500;
+	text-transform: uppercase;
+	font-size: 13px;
 }
 
 /* Elements
@@ -503,10 +505,10 @@ table {
 
 /* Links
 --------------------------------------------- */
-.site-header .menu-item-has-children > a::before,
-.theme-color, 
-.menu-1 .sub-menu > li:hover a{
-	color:var(--theme-color)
+.site-header .menu-item-has-children>a::before,
+.theme-color,
+.menu-1 .sub-menu>li:hover a {
+	color: var(--theme-color)
 }
 
 /* Forms
@@ -594,16 +596,17 @@ textarea {
 /*--------------------------------------------------------------
 # Layouts
 --------------------------------------------------------------*/
-.theme-padding{
-	padding:4.5rem 0;
+.theme-padding {
+	padding: 4.5rem 0;
 }
+
 /*--------------------------------------------------------------
 # Components
 --------------------------------------------------------------*/
 /* Navigation
 --------------------------------------------- */
 .site-branding img {
-	width:55%;
+	width: 55%;
 }
 
 .site-header {
@@ -643,75 +646,80 @@ textarea {
 	margin-left: auto;
 }
 
-.front-pg .menu-1 > li a,
-.front-pg .menu-2 > li a,
+.front-pg .menu-1>li a,
+.front-pg .menu-2>li a,
 .front-pg .site-branding-nav nav ul>li a {
 	color: #fff;
 }
 
-.menu-1 .sub-menu{
-    transition: top .3s ease 0s,opacity .3s;
-    position: absolute;
-    top: calc(100% + 30px);
-    left:-1rem;
-    width:200px;
-    transform: scaleX(0);
-    background-color: #fff;
-    padding:2rem;
-    z-index: 999;
-    border: 1px solid rgba(0,0,0,.15);
+.menu-1 .sub-menu {
+	transition: top .3s ease 0s, opacity .3s;
+	position: absolute;
+	top: calc(100% + 30px);
+	left: -1rem;
+	width: 200px;
+	transform: scaleX(0);
+	background-color: #fff;
+	padding: 2rem;
+	z-index: 999;
+	border: 1px solid rgba(0, 0, 0, .15);
 }
 
-.menu-1 .sub-menu{
-	opacity:0;
-	visibility:hidden;
+.menu-1 .sub-menu {
+	opacity: 0;
+	visibility: hidden;
 }
 
-.menu-1 > li:hover .sub-menu {
-    transform: translateX(0) scale(1);
+.menu-1>li:hover .sub-menu {
+	transform: translateX(0) scale(1);
 	top: calc(100% - 1rem);
 }
 
-.menu-1 > li:hover .sub-menu {
-	opacity:1;
-	visibility:visible;
+.menu-1>li:hover .sub-menu {
+	opacity: 1;
+	visibility: visible;
 }
 
-.menu-1 > li {
-    position: relative;
-    height: 100%;
-    padding: 2rem 0;
+.menu-1>li {
+	position: relative;
+	height: 100%;
+	padding: 2rem 0;
 }
 
-.menu-1 .sub-menu > li a{
-	color:#999;
-	margin:0 0 .5rem;
+.menu-1 .sub-menu>li a {
+	color: #999;
+	margin: 0 0 .5rem;
 }
 
-.inner-pg .menu-1 > li a,
-.inner-pg .menu-2 > li a,
+.inner-pg .menu-1>li a,
+.inner-pg .menu-2>li a,
 .inner-pg .site-branding-nav nav ul>li a {
 	color: #222;
 }
 
-.inner-pg .menu-toggle span{
-	background-color:#222;
+.inner-pg .menu-toggle span {
+	background-color: #222;
 }
 
-.site-header .menu-item-has-children > a::before {
+.site-header .menu-item-has-children>a::before {
 	content: "\F4FE";
 	position: absolute;
 	top: 50%;
 	right: -1.25rem;
 	transform: translateY(-50%);
 	font-family: bootstrap-icons;
-	font-size: 17px;
+	font-size:1.0625rem;
+}
+
+.site-header a:not(ul ul a){
+	font-family:'CerebriSansPro-Medium';
+	font-size:1.0625rem;
 }
 
 /* Posts and pages
 --------------------------------------------- */
 .a-plus-home-banner {
-	height:100vh;
+	height: 100vh;
 }
 
 .flickity-viewport,
@@ -743,7 +751,7 @@ textarea {
 .banner-slider::before {
 	position: absolute;
 	content: '';
-	background: rgba(0, 0, 0, .4);
+	background: rgba(0, 0, 0, .3);
 	height: 100%;
 	width: 100%;
 	z-index: 1;
@@ -753,16 +761,16 @@ textarea {
 .carousel-tabs {
 	bottom: 0;
 	right: 0;
-	width: 65%;
+	width:55%;
 }
 
 
-.carousel-tabs, 
-.front-pg .menu-toggle span{
-		background: #fff;
+.carousel-tabs,
+.front-pg .menu-toggle span {
+	background: #fff;
 }
 
-.project-title, 
+.project-title,
 .carousel-tabs li {
 	padding: 2rem 3rem;
 }
@@ -772,39 +780,95 @@ textarea {
 }
 
 .a-plus-home-banner .flickity-page-dots {
-    top: 50%;
-    right: 6rem;
-    left: unset;
-    width: unset;
-    transform: translateY(-50%);
-	bottom:unset;
+	top: 50%;
+	right: 6rem;
+	left: unset;
+	width: unset;
+	transform: translateY(-50%);
+	bottom: unset;
 }
 
-.a-plus-home-banner .flickity-page-dots .dot{
-	margin-bottom:1rem;
+.a-plus-home-banner .flickity-page-dots .dot {
+	margin-bottom: 1rem;
 }
 
 /*--------------------------------------------------------------
 # Single
 1. Projects
 --------------------------------------------------------------*/
-.project-banner{
-	height:100vh;
+.project-banner {
+	height: 100vh;
 }
 
-.project-banner h1{
-	margin-bottom:0;
+.project-title{
+	padding: 88px 3rem 0;
 }
 
-.project-description{
-	padding-left:3rem;
+.project-banner h1 {
+	margin-bottom: 0;
 }
 
-.project-images .carousel{
-	height:570px;
+.project-description {
+	padding-left: 3rem;
+}
+
+.project-images .carousel {
+	height: 570px;
 }
 
 .nav-links {
 	display: flex;
 	justify-content: space-between;
+}
+
+.project-description p {
+	font-size: 1.15rem;
+}
+
+/*--------------------------------------------------------------
+# Taxonomies
+1. Industry
+--------------------------------------------------------------*/
+.term-card img {
+	height: calc(100vh * 2/3);
+}
+
+.term-card-body {
+	position: absolute;
+	bottom:0;
+	z-index:9999;
+	padding: 1.5rem;
+}
+
+.term-card-body {
+	color: var(--theme-text-color);
+}
+
+.term-card span {
+	font-size: 13px;
+	white-space: nowrap;
+}
+
+.industry-heading{
+	font-size:4rem;
+	margin:0 0 3rem;
+}
+
+.project-banner::before, 
+.term-card::before {
+	position: absolute;
+	content: "";
+	background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, black 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00ffffff', endColorstr='#000000', GradientType=0);
+	height:75%;
+	width: 100%;
+	display: block;
+	z-index: 1;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+
+.term-card p {
+	height: 3rem;
 }

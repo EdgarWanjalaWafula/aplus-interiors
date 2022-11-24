@@ -6,20 +6,20 @@
     if(has_post_thumbnail()):
         ?>
             <section class="position-relative d-flex align-items-center project-banner parralax-window" data-parallax="scroll" data-image-src="<?php echo get_the_post_thumbnail_url(); ?>">
-                <div class="container position-relative">
+                <div class="container position-relative higher-z-index">
                     <div class="row">
                         <div class="col-md-11">
                             <div class="project-title bg- text-white">
-                                <?php 
+                               <h1><?php echo get_the_title(); ?></h1> 
+                               <?php 
                                     $industry = get_the_terms(get_the_id(), 'industry'); 
 
                                     if($industry){
                                         foreach($industry as $i){
-                                            echo "<span><a class='theme-color' href='".get_term_link($i->term_id)."'>".$i->name."</a></span>";
+                                            echo "<span>Found in: <a class='theme-color' href='".get_term_link($i->term_id)."'>".$i->name."</a></span>";
                                         }
                                     }
                                 ?>
-                               <h1><?php echo get_the_title(); ?></h1> 
                             </div>
                         </div>
                     </div>
@@ -35,7 +35,7 @@
                     <div class="row">
                         <div class="col-lg-7 col-md-8">
                             <div class="project-description">
-                                <h4><?php echo esc_html('Description'); ?></h4>
+                                <h4 ><?php echo esc_html__('Description', 'A-plus_Interiors'); ?></h4>
                                 <?php echo get_the_content(); ?>
                             </div>
                         </div> 
@@ -44,7 +44,8 @@
                                 <table class="table table-bordered table-striped">
                                     <tbody>
                                         <?php 
-                                            if($project_meta !== null){
+                                            // var_dump($project_meta);
+                                            if($project_meta){
                                                 foreach($project_meta as $key=>$meta){
                                                     ?>
                                                         <tr>

@@ -61,7 +61,7 @@
                                     <li>
                                         <div class="tab-title">
                                             <span>0<?php echo $i; ?>.</span>
-                                            <h5><?php echo get_the_title(); ?></h5>
+                                            <h5 class="m-0"><?php echo get_the_title(); ?></h5>
                                         </div>
                                     </li>
                                 <?php
@@ -89,7 +89,7 @@
                                 echo $about_the_firm['paragraph'] ? '<p>'.$about_the_firm['paragraph'].'</p>' : null; 
                             ?>
                         </div>
-                        <div class="col">
+                        <div class="col-md-5">
 
                         </div>
                     </div>
